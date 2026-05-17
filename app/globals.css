@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'DelaGothicOne';
+  src: url('/fonts/DelaGothicOne-Regular.woff2') format('woff2'),
+       url('/fonts/DelaGothicOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@import "tailwindcss";
+
+:root {
+  --navy:   #080b18;
+  --navy2:  #0d1025;
+  --gold:   #F7A220;
+  --gold2:  #ffc040;
+  --w:      #e8e5de;
+  --dim:    rgba(232,229,222,.32);
+  --dim2:   rgba(232,229,222,.55);
+  --bdr:    rgba(232,229,222,.07);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--navy);
+  color: var(--w);
+  font-family: 'DelaGothicOne', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a { text-decoration: none; color: inherit; cursor: none; }
+button { cursor: none; font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
+
+.coming-soon-text { white-space: nowrap; }
+@media (max-width: 720px) {
+  .coming-soon-text { white-space: normal; }
+}
