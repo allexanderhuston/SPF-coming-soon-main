@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/sunsetfestival/sunsetfestival.bg/
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -R out/* $DEPLOYPATH
